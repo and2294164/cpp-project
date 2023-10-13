@@ -1,19 +1,19 @@
 #ifndef POLYNOMIAL_HPP
 #define POLYNOMIAL_HPP
 
-#include"term.hpp"
-#include<vector>
+#include "term.hpp"
+#include <vector>
+using namespace std;
 
-class Poly {
+class Polynomial {
     private:
         vector<Term> terms;
     public:
-        Poly(vector<Term> t);
+        Polynomial();
+        Polynomial(vector<Term> t);
+        ~Polynomial();
         void add(Term t);
         void print();
-        Poly combineLikeTerms();
+        //Polynomial combineLikeTerms();
 };
-
-
-
 #endif

@@ -10,9 +10,11 @@ class Term {
         string var;
         int exp;
     public:
-        Term(int c, string v, int e);
         Term();
+        Term(int c, string v, int e);
+        ~Term();
         string toString();
+        bool operator!=(const Term &that);
 };
 
 

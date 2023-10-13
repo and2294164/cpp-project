@@ -53,7 +53,7 @@ int main() {
 
     std::vector<Term> term_list;
 
-    cout << "NAME: SAMPLE OUTPUT" << endl << endl;
+    cout << "NAME: Andrew Bohata" << endl << endl;
 
     // Test Term object
     cout << "Testing term.cpp/hpp:" << endl;
@@ -81,11 +81,11 @@ int main() {
     cout << endl << "Testing polynomial.cpp/hpp : " << endl;
     cout << "Original: : ";
     poly1.print();
-    poly2 = poly1.combineLikeTerms();
+    //poly2 = poly1.combineLikeTerms();
     cout << endl << "Combined: : ";
     poly2.print();
     cout << endl << endl;
 
-    cout << "NAME: SAMPLE OUTPUT" << endl;;
+    cout << "NAME: Andrew Bohata" << endl;;
     return 0;
 }

@@ -1,17 +1,18 @@
-#include"polynomial.hpp"
-#include<iostream>
-
+#include "polynomial.hpp"
+#include <iostream>
+#include <vector>
 using namespace std;
 
-Poly::Poly(vector<Term> t) : terms(t) { }
+Polynomial::Polynomial() { }
+Polynomial::Polynomial(vector<Term> t) : terms(t) { }
+Polynomial::~Polynomial() { }
 
-void Poly::add(Term t) {
-    terms.push_back(t);
-}
+void Polynomial::add(Term t) { terms.push_back(t); }
 
-void Poly::print() {
+void Polynomial::print() {
 
     for(Term t : terms) {
-        cout << t.toString() << " + " << endl;
+        cout << t.toString() << " ";
+        if(t != terms.back()) cout << "+ ";
     }
 }
