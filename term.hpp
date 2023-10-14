@@ -15,6 +15,8 @@ class Term {
         ~Term();
         string toString();
         bool operator!=(const Term &that);
+        bool canCombine(Term &that);
+        Term combine(Term &that);
 };
 
 

@@ -14,6 +14,6 @@ class Polynomial {
         ~Polynomial();
         void add(Term t);
         void print();
-        //Polynomial combineLikeTerms();
+        Polynomial combineLikeTerms();
 };
 #endif

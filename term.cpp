@@ -23,6 +23,28 @@ string Term::toString() {
 
 bool Term::operator!=(const Term &that) {
 
-    if(this->coeff != that.coeff && this->exp != that.exp) return 1;
-    return 0;
+    if(this->coeff != that.coeff && this->exp != that.exp
+       && this->var.compare(that.var) == 0) 
+       {
+        return true;
+       } 
+    return false;
+}
+
+bool Term::canCombine(Term &that) {
+
+    cout << "this=" << this->toString() << endl;
+    cout << "that=" << that.toString() << endl;
+    if (this->exp == that.exp) {
+        return true;
+    } 
+    return false;
+}
+
+Term Term::combine(Term &that) {
+
+    Term ret{that.coeff, that.var, that.exp};
+    ret.coeff += this->coeff;
+    cout << endl << "combined term: " << ret.toString() << endl;
+    return ret;
 }
