@@ -81,7 +81,7 @@ int main() {
     cout << endl << "Testing polynomial.cpp/hpp : " << endl;
     cout << "Original: : ";
     poly1.print();
-    //poly2 = poly1.combineLikeTerms();
+    poly2 = poly1.combineLikeTerms();
     cout << endl << "Combined: : ";
     poly2.print();
     cout << endl << endl;

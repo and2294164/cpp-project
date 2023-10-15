@@ -12,8 +12,9 @@ class Polynomial {
         Polynomial();
         Polynomial(vector<Term> t);
         ~Polynomial();
+
         void add(Term t);
-        void print();
         Polynomial combineLikeTerms();
+        void print();
 };
 #endif

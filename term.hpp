@@ -13,10 +13,12 @@ class Term {
         Term();
         Term(int c, string v, int e);
         ~Term();
-        string toString();
-        bool operator!=(const Term &that);
+
         bool canCombine(Term &that);
-        Term combine(Term &that);
+        int getCoeff();
+        int getExp();
+        bool operator!=(const Term &that);
+        string toString();
 };
 
 
