@@ -13,7 +13,6 @@ void Polynomial::add(Term t) { terms.push_back(t); }
 Polynomial Polynomial::combineLikeTerms() {
 
     Polynomial ret;
-    Polynomial temp{this->terms};
     int coeff;
     map<int, int> combined;
 
@@ -22,7 +21,7 @@ Polynomial Polynomial::combineLikeTerms() {
         combined.insert( pair<int, int>(i, 0) );
     }
 
-    for(Term t : temp.terms) {
+    for(Term t : this->terms) {
 
         combined.at(t.getExp()) += t.getCoeff();
     }
