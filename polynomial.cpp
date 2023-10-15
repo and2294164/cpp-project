@@ -17,7 +17,7 @@ Polynomial Polynomial::combineLikeTerms() {
     int coeff;
     map<int, int> combined;
 
-    for(int i = 0; i < 5; i++) {
+    for(int i = 0; i <= 4; i++) {
 
         combined.insert( pair<int, int>(i, 0) );
     }
